@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 35 30% 97%;
+  --foreground: 25 25% 10%;
+  --primary: 18 70% 50%;
+  --primary-foreground: 35 40% 99%;
+  --secondary: 145 35% 35%;
+  --secondary-foreground: 35 40% 99%;
+  --success: 145 55% 45%;
+  --warning: 38 70% 50%;
+  --destructive: 0 84% 60%;
+  --muted: 35 20% 90%;
+  --muted-foreground: 25 15% 40%;
+  --border: 35 30% 90%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 25 25% 10%;
+    --foreground: 35 40% 99%;
+    --primary: 18 65% 55%;
+    --primary-foreground: 25 25% 10%;
+    --secondary: 145 30% 40%;
+    --secondary-foreground: 35 40% 99%;
+  }
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground font-sans antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utility classes */
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, hsl(18, 70%, 50%) 0%, hsl(25, 80%, 55%) 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(180deg, hsl(35, 40%, 99%) 0%, hsl(35, 30%, 96%) 100%);
+}
+
+.shadow-soft {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
